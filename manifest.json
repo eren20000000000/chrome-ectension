@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "My Leads",
+  "version": "1.1",
+  "description": "Save your leads",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "icon.png"
+  },
+  "permissions": ["tabs", "storage"]
+}
