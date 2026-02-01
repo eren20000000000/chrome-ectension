@@ -45,11 +45,14 @@ clear_btn.addEventListener("dblclick", ()=>{
     
 
 })
-
-const tabs = [
-  {url: "https://www.linkedin.com/in/per-harald-borgen/"}
-]
+//tab btn functionality
 
 tab_btn.addEventListener("click",()=>{
-    console.log(tabs[0].url)
+
+
+    chrome.tabs.query({active: true, currentWindow: true},function(tabs){
+    myLeads.push(tabs[0].url)
+    render(myLeads)
+    localStorage.setItem("myLeads",JSON.stringify(myLeads))
+    })
 })
